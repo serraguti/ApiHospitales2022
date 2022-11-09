@@ -37,7 +37,7 @@ namespace ApiHospitales
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo 
-                { Title = "Api Hospitales de martes", Version = "v1" });
+                { Title = "Api Hospitales de Almudena", Version = "v1" });
             });
         }
 

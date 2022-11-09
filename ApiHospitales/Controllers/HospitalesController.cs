@@ -31,5 +31,27 @@ namespace ApiHospitales.Controllers
         {
             return this.repo.FindHospital(id);
         }
+
+        //PODEMOS TENER MULTIPLES METODOS POST, PUT O DELETE
+        //INSERTAR CON OBJETO
+        [HttpPost]
+        public void InsertDepartamento(Hospital hospital)
+        {
+            this.repo.InsertHospital(hospital.IdHospital, hospital.Nombre
+                , hospital.Direccion, hospital.Telefono, hospital.Camas);
+        }
+
+        [HttpPut]
+        public void UpdateDepartamento(Hospital hospital)
+        {
+            this.repo.UpdateHospital(hospital.IdHospital, hospital.Nombre
+                , hospital.Direccion, hospital.Telefono, hospital.Camas);
+        }
+
+        [HttpDelete("{id}")]
+        public void DeleteHospital(int id)
+        {
+            this.repo.DeleteHospital(id);
+        }
     }
 }
